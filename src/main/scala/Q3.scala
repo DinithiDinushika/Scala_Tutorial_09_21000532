@@ -23,12 +23,11 @@ class Account(val accountId: Int, var balance: Double){
       println("Insufficient balance")
     }
   }
-
   override def toString: String = s"Account ID: $accountId, Balance: $balance"
 }
 
 object Q3 {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
 
     val account1 = new Account(1, 2500.00)
     val account2 = new Account(2, 1000.00)
@@ -50,6 +49,5 @@ object Q3 {
     println(account2)
 
   }
-
 
 }

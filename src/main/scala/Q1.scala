@@ -11,7 +11,7 @@ class Rational(p: Int, q: Int) {
 }
 
 object Q1 {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit = {
 
     val n1 = new Rational(1,2)
     println(n1.neg)

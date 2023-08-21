@@ -13,9 +13,8 @@ class Rational(p: Int, q: Int) {
 
 }
 
-
 object Q2 {
-  def main(args: Array[String]) {
+  def main(args: Array[String]): Unit =  {
 
     val x = new Rational(3, 4)
     val y = new Rational(5, 8)
