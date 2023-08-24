@@ -53,7 +53,7 @@ object Q4 {
       }
       else{
         //overdraft interest is 0.1
-        account.balance = account.balance * 0.1
+        account.balance += account.balance * 0.1
       }
       account
     }

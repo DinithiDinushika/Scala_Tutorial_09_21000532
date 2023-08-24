@@ -1,5 +1,5 @@
 class Rational(p: Int, q: Int) {
-  require(denominator > 0, "Denominator must be greater than 0")
+  require(q > 0, "Denominator must be greater than 0")
 
   def numerator = p
   def denominator = q
