@@ -1,31 +1,3 @@
-class Account(val accountId: Int, var balance: Double){
-
-  def Deposit(depositAmount: Double): Unit ={
-    this.balance = this.balance + depositAmount
-  }
-
-  def Withdraw(withdrawAmount: Double): Unit ={
-    if(this.balance >= withdrawAmount){
-      this.balance = this.balance - withdrawAmount
-    }
-    else{
-      println("Insufficient balance")
-    }
-  }
-
-  def Transfer(transAmount: Double, givenAccount: Account): Unit ={
-    if(this.balance >= transAmount){
-      this.Withdraw(transAmount)
-      givenAccount.Deposit(transAmount)
-
-    }
-    else{
-      println("Insufficient balance")
-    }
-  }
-  override def toString: String = s"Account ID: $accountId, Balance: $balance"
-}
-
 object Q3 {
   def main(args: Array[String]): Unit = {
 
@@ -48,6 +20,35 @@ object Q3 {
     println("Status of Account 2:")
     println(account2)
 
+  }
+
+  class Account(val accountId: Int, var balance: Double) {
+
+    def Deposit(depositAmount: Double): Unit = {
+      this.balance = this.balance + depositAmount
+    }
+
+    def Withdraw(withdrawAmount: Double): Unit = {
+      if (this.balance >= withdrawAmount) {
+        this.balance = this.balance - withdrawAmount
+      }
+      else {
+        println("Insufficient balance")
+      }
+    }
+
+    def Transfer(transAmount: Double, givenAccount: Account): Unit = {
+      if (this.balance >= transAmount) {
+        this.Withdraw(transAmount)
+        givenAccount.Deposit(transAmount)
+
+      }
+      else {
+        println("Insufficient balance")
+      }
+    }
+
+    override def toString: String = s"Account ID: $accountId, Balance: $balance"
   }
 
 }

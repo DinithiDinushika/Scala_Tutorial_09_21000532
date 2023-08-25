@@ -1,18 +1,3 @@
-class Rational(p: Int, q: Int) {
-  require(q > 0, "Denominator must be greater than 0")
-
-  def numerator = p
-  def denominator = q
-
-  def sub(R:Rational) =
-    new Rational(
-      this.numerator* R.denominator - this.denominator* R.numerator,
-      this.denominator* R.denominator)
-
-  override def toString(): String = numerator + "/" + denominator
-
-}
-
 object Q2 {
   def main(args: Array[String]): Unit =  {
 
@@ -24,6 +9,23 @@ object Q2 {
     println("x - y - z = "+ answer)
 
   }
+
+  class Rational(p: Int, q: Int) {
+    require(q > 0, "Denominator must be greater than 0")
+
+    def numerator = p
+
+    def denominator = q
+
+    def sub(R: Rational) =
+      new Rational(
+        this.numerator * R.denominator - this.denominator * R.numerator,
+        this.denominator * R.denominator)
+
+    override def toString(): String = numerator + "/" + denominator
+
+  }
+
 
 }
 
