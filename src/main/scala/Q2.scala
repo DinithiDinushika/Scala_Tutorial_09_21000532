@@ -6,6 +6,9 @@ object Q2 {
     val z = new Rational(2, 7)
 
     val answer = x.sub(y).sub(z)
+    println("x = "+ x)
+    println("y = "+ y)
+    println("z = "+ z)
     println("x - y - z = "+ answer)
 
   }

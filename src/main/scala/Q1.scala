@@ -2,7 +2,8 @@ object Q1 {
   def main(args: Array[String]): Unit = {
 
     val n1 = new Rational(1,2)
-    println(n1.neg)
+    println("Rational number is: "+ n1)
+    println("Negated rational number is: " + n1.neg)
   }
 
   class Rational(p: Int, q: Int) {
